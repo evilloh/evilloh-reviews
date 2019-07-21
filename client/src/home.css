@@ -75,6 +75,10 @@ a {
   background-color: var(--primary-color);
 }
 
+.toHomepage {
+  font-size: 3.7rem;
+}
+
 /* SECOND SECTION HOMEPAGE */
 
 .secondSection {

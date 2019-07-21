@@ -35,8 +35,8 @@ class Navbar extends Component {
             navbar_down: !this.state.visible
           })}
         >
-          <li>
-            <Link to={"/"}>*</Link>
+          <li className="toHomepage">
+            <Link to={"/"}>HOME</Link>
           </li>
           <li>
             <input type="text" placeholder="Working on this..." name="search" />
