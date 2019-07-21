@@ -1,0 +1,46 @@
+.movieList_container {
+  background-color: var(--primary-color);
+  min-height: 100vh;
+  height: 100%;
+  padding-top: 9rem;
+}
+
+.movies_list {
+  padding: 0 7vw;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.moviePages {
+  font-size: 2rem;
+  padding: 4rem 0;
+}
+
+.moviePages ul {
+  text-align: center;
+  color: var(--primary-color-white);
+}
+
+.moviePages li {
+  display: inline-block;
+  margin: 0 1.5rem;
+  cursor: pointer;
+  height: 3rem;
+  transition: all 0.1s;
+}
+
+.moviePages li:hover {
+  transform: scale(2);
+}
+
+.activepage {
+  color: var(--primary-color-light-2);
+  transform: scale(2);
+}
+
+.loading {
+  margin: 30vh auto;
+  display: block;
+}
