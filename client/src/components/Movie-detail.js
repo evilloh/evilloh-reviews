@@ -47,7 +47,7 @@ class MovieDetail extends Component {
       this.setState({ movie: theMovie });
       const title = this.state.movie.title;
 
-      Axios.get(`http://www.omdbapi.com/?apikey=${API_KEY}&t=$${title}`)
+      Axios.get(`https://www.omdbapi.com/?apikey=${API_KEY}&t=$${title}`)
         .then(data => {
           const dataTitle = data.data.Title.toLowerCase();
           const ourTitle = this.state.movie.title.toLowerCase();
