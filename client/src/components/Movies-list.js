@@ -35,7 +35,7 @@ class MovieList extends Component {
             <li>
               <p
                 onClick={() =>
-                  this.state.page > 1 && this.getMovies(this.state.page - 1)
+                  this.state.page < 8 && this.getMovies(this.state.page + 1)
                 }
               >
                 {prev}
@@ -124,7 +124,7 @@ class MovieList extends Component {
             <li>
               <p
                 onClick={() =>
-                  this.state.page < 8 && this.getMovies(this.state.page + 1)
+                  this.state.page > 1 && this.getMovies(this.state.page - 1)
                 }
               >
                 {next}
