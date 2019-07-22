@@ -3,9 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "dotenv -e .env.dev react-scripts start",
-    "build-dev": "dotenv -e .env.dev react-scripts build",
-    "build-prod": "dotenv -e .env.prod react-scripts build",
+    "start": "node ./bin/www",
     "dev": "DEBUG=app:* nodemon ./bin/www",
     "dev-windows": "nodemon ./bin/www"
   },
