@@ -11,17 +11,18 @@ import Fade from "react-reveal/Fade";
 class Home extends Component {
   constructor(props) {
     super(props);
-    this.state = { movies: [] };
+    this.state = { movies: [], loaded: false };
     this.services = new MovieServices();
   }
 
   componentDidMount() {
     this.services
-      .getAllMovies()
-      .then(allMovies => this.setState({ movies: allMovies }));
+      .getAllMovies(8)
+      .then(allMovies => this.setState({ movies: allMovies, loaded: true }));
   }
 
   render() {
+    console.log(this.state);
     return (
       <div className="homepage_container">
         <div className="hero">
@@ -35,11 +36,17 @@ class Home extends Component {
         <div className="secondSection">
           <div className="appearthisshit" style={{ overflow: "hidden" }}>
             <Fade right big>
-              <p>Markup that will be revealed on scroll</p>
+              <p>Here's the last three movies I've seen!</p>
             </Fade>
-            <h1>Evilloh's reviews</h1>
-            <h2>Recensioni senza pretese di film</h2>
-            <h2>di un nessuno qualsiasi sul web</h2>
+            {this.state.loaded && (
+              <div className="movies_list">
+                {this.state.movies
+                  .slice(this.state.movies.length - 3, this.state.movies.length)
+                  .map((theMovie, idx) => (
+                    <MovieCard key={idx} {...theMovie} />
+                  ))}
+              </div>
+            )}
           </div>
         </div>
       </div>

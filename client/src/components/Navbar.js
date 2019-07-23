@@ -43,8 +43,8 @@ class Navbar extends Component {
           </li>
           <Link to={"/movies"}>Lista Film</Link>
           <li>Mangusta D'oro</li>
-          <li>Login</li>
-          <li>Registrati</li>
+          {this.state.workInProg && <li>Login</li>}
+          {this.state.workInProg && <li>Registrati</li>}
         </ul>
       </div>
     );

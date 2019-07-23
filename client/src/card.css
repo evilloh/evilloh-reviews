@@ -40,3 +40,16 @@
   font-size: 1.5vw;
   color: var(--primary-color-white);
 }
+
+@media screen and (max-width: 768px) {
+  .card_container {
+    width: 30%;
+  }
+  
+}
+
+@media screen and (max-width: 425px) {
+  .card_container {
+    width: 80%;
+  }
+}

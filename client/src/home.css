@@ -93,3 +93,51 @@ a {
   font-size: 4rem;
   color: black;
 }
+
+.appearthisshit p:first-child {
+  text-align: center;
+  margin: 4rem 0;
+  font-weight: bold;
+}
+
+.appearthisshit .card_container {
+  width: 20%;
+}
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 768px) {
+  .secondSection {
+    display: none;
+  }
+  .hero_description {
+    padding: 5vh 0;
+    margin-top: 30vh;
+    width: 100%;
+    align-self: center;
+    background-color: rgba(46, 42, 36, 0.363);
+    text-align: center;
+  }
+  .hero h1,
+  h2 {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .secondSection {
+    display: none;
+  }
+
+  .hero h1 {
+    font-size: 3rem;
+  }
+
+  .hero h2 {
+    font-size: 1.5rem;
+    font-weight: 300;
+  }
+
+  .navbar li:first-child {
+    display: none;
+  }
+}
