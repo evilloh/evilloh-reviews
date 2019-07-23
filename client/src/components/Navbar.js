@@ -42,7 +42,7 @@ class Navbar extends Component {
             <input type="text" placeholder="Working on this..." name="search" />
           </li>
           <Link to={"/movies"}>Lista Film</Link>
-          <li>Mangusta D'oro</li>
+          <li onClick={() => alert("Coming Soon!")}>Mangusta D'oro</li>
           {this.state.workInProg && <li>Login</li>}
           {this.state.workInProg && <li>Registrati</li>}
         </ul>
